@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Happy Birthday My Love ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(-45deg,#ff758c,#ff7eb3,#ffc3a0,#ffafbd);
+    background-size:400% 400%;
+    animation:gradientBG 12s ease infinite;
+    color:white;
+    position:relative;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    max-width:700px;
+    padding:45px;
+    border-radius:25px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+    z-index:2;
+    animation:fadeIn 2s ease;
+}
+
+h1{
+    font-size:4rem;
+    font-family:'Great Vibes',cursive;
+    margin-bottom:15px;
+}
+
+h2{
+    font-size:1.4rem;
+    font-weight:300;
+    margin-bottom:25px;
+}
+
+p{
+    font-size:1.1rem;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#ff4f81;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    background:#ffe3ec;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Floating Hearts */
+.heart{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#ff3366;
+    transform:rotate(45deg);
+    animation:float 10s linear infinite;
+    opacity:0.5;
+}
+
+.heart::before,
+.heart::after{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:#ff3366;
+    border-radius:50%;
+}
+
+.heart::before{
+    top:-10px;
+    left:0;
+}
+
+.heart::after{
+    left:-10px;
+    top:0;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(100vh) rotate(45deg);
+        opacity:0;
+    }
+    20%{
+        opacity:0.6;
+    }
+    100%{
+        transform:translateY(-100vh) rotate(45deg);
+        opacity:0;
+    }
+}
+
+audio{
+    display:none;
+}
+
+@media(max-width:600px){
+
+    h1{
+        font-size:3rem;
+    }
+
+    h2{
+        font-size:1.1rem;
+    }
+
+    p{
+        font-size:1rem;
+    }
+
+    .container{
+        padding:30px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<div class="heart" style="left:10%; animation-delay:0s;"></div>
+<div class="heart" style="left:20%; animation-delay:2s;"></div>
+<div class="heart" style="left:35%; animation-delay:4s;"></div>
+<div class="heart" style="left:50%; animation-delay:1s;"></div>
+<div class="heart" style="left:65%; animation-delay:3s;"></div>
+<div class="heart" style="left:80%; animation-delay:5s;"></div>
+<div class="heart" style="left:95%; animation-delay:2s;"></div>
+
+<div class="container">
+
+    <h1>Happy Birthday ❤️</h1>
+
+    <h2>To My Beautiful and most precious person 💝</h2>
+
+    <p>
+        Happy Birthday, my love 💖<br><br>
+
+        You are the best thing that has ever happened to me.
+        Every moment with you feels special, every smile of yours
+        brightens my day, and every second with you becomes a memory
+        I never want to lose.<br><br>
+
+        Thank you for filling my life with love, happiness, and warmth.
+        I hope your birthday is as beautiful and amazing as you are.<br><br>
+
+        I love you endlessly ❤️
+    </p>
+
+    <button class="btn" onclick="toggleMusic()" id="musicBtn">
+    🎵 Play Music
+</button>
+
+<script>
+const music = document.getElementById("music");
+const btn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+    if (music.paused) {
+        music.play();
+        btn.innerHTML = "⏸ Pause Music";
+    } else {
+        music.pause();
+        btn.innerHTML = "🎵 Play Music";
+    }
+}
+</script>
+
+</div>
+
+<audio id="music">
+    <source src="nee kavithagala.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function playMusic(){
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
