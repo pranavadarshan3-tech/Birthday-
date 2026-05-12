@@ -185,42 +185,45 @@ audio{
         Happy Birthday, my love 💖<br><br>
 
         You are the best thing that has ever happened to me.
-        Every moment with you feels special, every smile of yours
-        brightens my day, and every second with you becomes a memory
+        Every moment i watch you feels special, every smile of yours
+        brightens my day, and every thing about you becomes a memory
         I never want to lose.<br><br>
 
-        Thank you for filling my life with love, happiness, and warmth.
+        I wish you will never leave me and always be with me.
         I hope your birthday is as beautiful and amazing as you are.<br><br>
 
         I love you endlessly ❤️
     </p>
 
-    <button class="btn" onclick="toggleMusic()" id="musicBtn">
+    <button class="btn" id="musicBtn">
     🎵 Play Music
 </button>
 
-<script>
-const music = document.getElementById("music");
-const btn = document.getElementById("musicBtn");
-
-function toggleMusic() {
-    if (music.paused) {
-        music.play();
-        btn.innerHTML = "⏸ Pause Music";
-    } else {
-        music.pause();
-        btn.innerHTML = "🎵 Play Music";
-    }
-}
-</script>
-
-</div>
-
 <audio id="music">
-    <source src="nee kavithagala.mp3" type="audio/mp3">
+    <source src="neekavithaigala.mp3" type="audio/mp3">
 </audio>
 
 <script>
+window.addEventListener("DOMContentLoaded", () => {
+
+    const music = document.getElementById("music");
+    const btn = document.getElementById("musicBtn");
+
+    btn.addEventListener("click", () => {
+
+        if (music.paused) {
+            music.play();
+            btn.innerHTML = "⏸ Pause Music";
+        } else {
+            music.pause();
+            btn.innerHTML = "🎵 Play Music";
+        }
+
+    });
+
+});
+</script>
+    
 function playMusic(){
     document.getElementById("music").play();
 }
